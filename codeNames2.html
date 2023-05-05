@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css" integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+	<link href='https://fonts.googleapis.com/css?family=Courier Prime' rel='stylesheet'>
+	<link rel="stylesheet" href="codeNamesStyle.css" type="text/css">
+	<title>Code Names</title>
+	
+	<script>
+		/*document.addEventListener("DOMContentLoaded",function(){
+		
+		var blueScore = document.querySelector("#score");
+		var row = document.querySelector("#row");
+		
+		row.addEventListener("click",function() {
+			if (event.target.matches("a#tree")) {
+				console.log("YES!");
+				document.getElementById("tree").style.backgroundColor = "red"
+				document.getElementById("noah").style.backgroundColor = "blue";
+			}
+		})*/
+		
+		var blueScore = 8;
+		var redScore = 9;
+		
+		function colorRed(red){
+  			document.getElementById(red).style.color = "white"; // forecolor
+			document.getElementById(red).style.backgroundColor = "red"; // backcolor
+			document.getElementById("redScore").innerHTML = redScore - 1;
+			redScore = redScore - 1;
+			document.getElementById("playerTurn").innerHTML = "red's turn";
+			document.getElementById("playerTurn").style.color = "red";
+			if (redScore == 0 && blueScore > 0){
+				alert("RED WON!");
+			}
+		}
+		function colorBlue(blue){
+  			document.getElementById(blue).style.color = "white"; // forecolor
+  			document.getElementById(blue).style.backgroundColor = "blue"; // backcolor
+			document.getElementById("blueScore").innerHTML = blueScore - 1 + " - ";
+			blueScore = blueScore - 1;
+			document.getElementById("playerTurn").innerHTML = "blue's turn";
+			document.getElementById("playerTurn").style.color = "blue";
+			if (blueScore == 0 && redScore > 0){
+				alert("BLUE WON!");
+			}
+			
+		}
+		function colorTan(tan){
+  			document.getElementById(tan).style.color = "white"; // forecolor
+  			document.getElementById(tan).style.backgroundColor = "#fff0c7"; // backcolor
+			if(document.getElementById("playerTurn").innerHTML == "red's turn"){
+				document.getElementById("playerTurn").innerHTML = "blue's turn";
+				document.getElementById("playerTurn").style.color = "blue";
+			}else{
+				document.getElementById("playerTurn").innerHTML = "red's turn";
+				document.getElementById("playerTurn").style.color = "red";
+			}
+			
+		}
+		function colorBlack(black){
+  			document.getElementById(black).style.color = "white"; // forecolor
+  			document.getElementById(black).style.backgroundColor = "black"; // backcolor
+			alert("GAME OVER");
+		}
+		
+		
+	//})
+	</script>
+  <style>
+    body{
+			text-align: center;
+			padding: 50px;
+			margin-left: 90px;
+			margin-right: 90px;
+		}
+		h1{
+			font-family: 'Courier Prime';
+			letter-spacing: 4px;
+		}
+		
+		.col-lg{
+			border: 1px solid black;
+			color: black;
+			height: 100px;
+			margin-right: 10px;
+		}
+		h2{
+			margin-top: 10%;
+		}
+		.container{
+			margin-top: 60px;
+		}
+		.row{
+			margin-top: 10px;
+		}
+		#blueScore{
+			color: blue;
+			font-size: 20px;
+			float: left;
+			margin-top: 20px;
+		}
+		#redScore{
+			float: left;
+			color: red;
+			font-size: 20px;
+			margin-top: 20px;
+		}
+		#playerTurn{
+			float: left;
+			font-size: 20px;
+			margin-top: 20px;
+			margin-left: 430px;
+			color: blue;
+		}
+		li a{
+			padding: 14px 16px;
+			display: block;
+			color: #ff9494;
+			background-color: lightgrey;
+		}
+		ul{
+			list-style-type: none;
+		}
+		li{
+			float: left;
+		}
+		.codeNamesNav{
+			margin-bottom: 100px;
+            margin-left: 45%;
+		}
+		li a:hover {
+  			background-color: #ff9494;
+			color: lightgrey;
+		}
+		.active{
+			background-color: #ff5252;
+			color: lightgrey;
+		}
+		.active:hover{
+			background-color: #ff5252;
+		}
+  </style>
+</head>
+<body id="gameOne">
+<div>
+
+<div>
+  <h1>CODENAMES</h1>
+  <nav class="codeNamesNav">
+	<ul>
+		<li><a class="active" style="text-decoration: none" href="#gameOne">Game 1</a></li>
+	</ul>
+</nav>
+  <hr>
+</div>
+
+
+
+<p id="blueScore">8 -&nbsp</p>
+<p id="redScore">9</p>
+<p id="playerTurn">blue's turn</p>
+<br>
+<div class="container" id="board"> 
+	
+	<!-- Row 1 -->
+
+  <div class="row" id="row">
+  	<button type="button" class="col-lg" id="straw" onclick="colorBlue('straw'); ">
+	  <h2>Straw</h2>
+	</button>
+	
+    <button class="col-lg" id="dress" onclick="colorRed('dress'); ">
+	  <h2>Dress</h2>
+	</button>
+	
+    <button href="#" class="col-lg" id="bear" onclick="colorRed('bear'); ">
+	  <h2>Bear</h2>
+	</button>
+	
+	<button href="#" class="col-lg" id="washington" onclick="colorRed('washington'); ">
+	  <h2>Washington</h2>
+	</button>
+	
+	<button href="#" class="col-lg" id="compound" onclick="colorRed('compound'); ">
+	  <h2>Compound</h2>
+    </button>
+  </div>
+  
+  <!--Row 2 -->
+  
+  <div class="row">
+  	<button href="#" class="col-lg" id="lion" onclick="colorBlue('lion'); ">
+	  <h2>Lion</h2>
+	</button>
+	
+    <button href="#" class="col-lg" id="school" onclick="colorRed('school'); ">
+	  <h2>School</h2>
+	</button>
+	
+    <button href="#" class="col-lg" id="concert" onclick="colorBlack('concert'); ">
+	  <h2>Concert</h2>
+	</button>
+	
+	<button href="#" class="col-lg" id="fan" onclick="colorRed('fan'); ">
+	  <h2>Fan</h2>
+	</button>
+	
+	<button href="#" class="col-lg" id="amazon" onclick="colorTan('amazon'); ">
+	  <h2>Amazon</h2>
+	</button>
+  </div>
+   
+  <!--Row 3 -->
+  
+  <div class="row">
+  	<button href="#" class="col-lg" id="hole" onclick="colorBlue('hole'); ">
+	  <h2>Hole</h2>
+	</button>
+	
+    <button href="#" class="col-lg" id="code" onclick="colorTan('code'); ">
+	  <h2>Code</h2>
+	</button>
+	
+    <button href="#" class="col-lg" id="pilot" onclick="colorTan('pilot'); ">
+	  <h2>Pilot</h2>
+	</button>
+	
+	<button href="#" class="col-lg" id="fire" onclick="colorRed('fire'); ">
+	  <h2>Fire</h2>
+	</button>
+	
+	<button href="#" class="col-lg" id="center" onclick="colorBlue('center'); ">
+	  <h2>Center</h2>
+	</button>
+  </div>
+   
+  <!--Row 4 -->
+  
+  <div class="row">
+  	<button href="#" class="col-lg" id="millionaire" onclick="colorTan('millionaire'); ">
+	  <h2>Millionaire</h2>
+	</button>
+	
+    <button href="#" class="col-lg" id="paste" onclick="colorBlue('paste'); ">
+	  <h2>Paste</h2>
+	</button>
+	
+    <button href="#" class="col-lg" id="thumb" onclick="colorTan('thumb'); ">
+	  <h2>Thumb</h2>
+	</button>
+	
+	<button href="#" class="col-lg" id="tap" onclick="colorBlue('tap'); ">
+	  <h2>Tap</h2>
+	</button>
+	
+	<button href="#" class="col-lg" id="conductor" onclick="colorTan('conductor'); ">
+	  <h2>Conductor</h2>
+	</button>
+  </div>
+   
+  <!--Row 5 -->
+  
+  <div class="row">
+  	<button href="#" class="col-lg" id="mint" onclick="colorRed('mint'); ">
+	  <h2>Mint</h2>
+	</button>
+	
+    <button href="#" class="col-lg" id="log" onclick="colorBlue('log'); ">
+	  <h2>Log</h2>
+	</button>
+	
+    <button href="#" class="col-lg" id="casino" onclick="colorBlue('casino'); ">
+	  <h2>Casino</h2>
+	</button>
+	
+	<button href="#" class="col-lg" id="tag" onclick="colorTan('tag'); ">
+	  <h2>Tag</h2>
+	</button>
+	
+	<button href="#" class="col-lg" id="doctor" onclick="colorRed('doctor'); ">
+	  <h2>Doctor</h2>
+	</button>
+  </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/js/bootstrap.min.js" integrity="sha384-XEerZL0cuoUbHE4nZReLT7nx9gQrQreJekYhJD9WNWhH8nEW+0c5qq7aIo2Wl30J" crossorigin="anonymous"></script>
+</body>
+</html>
