@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Code Names</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css" integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+	<link href='https://fonts.googleapis.com/css?family=Courier Prime' rel='stylesheet'>
+	<link rel="stylesheet" href="codeNamesStyle.css" type="text/css">
+	<script src="codeNames.JS"></script>
+</head>
+<body id="gameOne">
+<div>
+
+<div>
+  <h1>CODENAMES</h1>
+  <nav class="codeNamesNav">
+	<ul>
+		<li><a class="active" style="text-decoration: none" href="#gameOne">Game 1</a></li>
+	</ul>
+</nav>
+  <hr>
+</div>
+
+
+
+<p id="blueScore">8 -&nbsp</p>
+<p id="redScore">9</p>
+<p id="playerTurn">blue's turn</p>
+<br>
+<div class="container" id="board"> 
+	
+	<!-- Row 1 -->
+
+  <div class="row" id="row">
+  	<button type="button" class="col-lg" id="straw" onclick="colorBlue('straw'); ">
+	  <h2>Straw</h2>
+	</button>
+	
+    <button class="col-lg" id="dress" onclick="colorRed('dress'); ">
+	  <h2>Dress</h2>
+	</button>
+	
+    <button href="#" class="col-lg" id="bear" onclick="colorRed('bear'); ">
+	  <h2>Bear</h2>
+	</button>
+	
+	<button href="#" class="col-lg" id="washington" onclick="colorRed('washington'); ">
+	  <h2>Washington</h2>
+	</button>
+	
+	<button href="#" class="col-lg" id="compound" onclick="colorRed('compound'); ">
+	  <h2>Compound</h2>
+    </button>
+  </div>
+  
+  <!--Row 2 -->
+  
+  <div class="row">
+  	<button href="#" class="col-lg" id="lion" onclick="colorBlue('lion'); ">
+	  <h2>Lion</h2>
+	</button>
+	
+    <button href="#" class="col-lg" id="school" onclick="colorRed('school'); ">
+	  <h2>School</h2>
+	</button>
+	
+    <button href="#" class="col-lg" id="concert" onclick="colorBlack('concert'); ">
+	  <h2>Concert</h2>
+	</button>
+	
+	<button href="#" class="col-lg" id="fan" onclick="colorRed('fan'); ">
+	  <h2>Fan</h2>
+	</button>
+	
+	<button href="#" class="col-lg" id="amazon" onclick="colorTan('amazon'); ">
+	  <h2>Amazon</h2>
+	</button>
+  </div>
+   
+  <!--Row 3 -->
+  
+  <div class="row">
+  	<button href="#" class="col-lg" id="hole" onclick="colorBlue('hole'); ">
+	  <h2>Hole</h2>
+	</button>
+	
+    <button href="#" class="col-lg" id="code" onclick="colorTan('code'); ">
+	  <h2>Code</h2>
+	</button>
+	
+    <button href="#" class="col-lg" id="pilot" onclick="colorTan('pilot'); ">
+	  <h2>Pilot</h2>
+	</button>
+	
+	<button href="#" class="col-lg" id="fire" onclick="colorRed('fire'); ">
+	  <h2>Fire</h2>
+	</button>
+	
+	<button href="#" class="col-lg" id="center" onclick="colorBlue('center'); ">
+	  <h2>Center</h2>
+	</button>
+  </div>
+   
+  <!--Row 4 -->
+  
+  <div class="row">
+  	<button href="#" class="col-lg" id="millionaire" onclick="colorTan('millionaire'); ">
+	  <h2>Millionaire</h2>
+	</button>
+	
+    <button href="#" class="col-lg" id="paste" onclick="colorBlue('paste'); ">
+	  <h2>Paste</h2>
+	</button>
+	
+    <button href="#" class="col-lg" id="thumb" onclick="colorTan('thumb'); ">
+	  <h2>Thumb</h2>
+	</button>
+	
+	<button href="#" class="col-lg" id="tap" onclick="colorBlue('tap'); ">
+	  <h2>Tap</h2>
+	</button>
+	
+	<button href="#" class="col-lg" id="conductor" onclick="colorTan('conductor'); ">
+	  <h2>Conductor</h2>
+	</button>
+  </div>
+   
+  <!--Row 5 -->
+  
+  <div class="row">
+  	<button href="#" class="col-lg" id="mint" onclick="colorRed('mint'); ">
+	  <h2>Mint</h2>
+	</button>
+	
+    <button href="#" class="col-lg" id="log" onclick="colorBlue('log'); ">
+	  <h2>Log</h2>
+	</button>
+	
+    <button href="#" class="col-lg" id="casino" onclick="colorBlue('casino'); ">
+	  <h2>Casino</h2>
+	</button>
+	
+	<button href="#" class="col-lg" id="tag" onclick="colorTan('tag'); ">
+	  <h2>Tag</h2>
+	</button>
+	
+	<button href="#" class="col-lg" id="doctor" onclick="colorRed('doctor'); ">
+	  <h2>Doctor</h2>
+	</button>
+  </div>
+</div>
+</body>
+</html>

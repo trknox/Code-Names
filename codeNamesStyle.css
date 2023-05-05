@@ -1,0 +1,72 @@
+body{
+			text-align: center;
+			padding: 50px;
+			margin-left: 90px;
+			margin-right: 90px;
+		}
+		h1{
+			font-family: 'Courier Prime';
+			letter-spacing: 4px;
+		}
+		
+		.col-lg{
+			border: 1px solid black;
+			color: black;
+			height: 100px;
+			margin-right: 10px;
+		}
+		h2{
+			margin-top: 10%;
+		}
+		.container{
+			margin-top: 60px;
+		}
+		.row{
+			margin-top: 10px;
+		}
+		#blueScore{
+			color: blue;
+			font-size: 20px;
+			float: left;
+			margin-top: 20px;
+		}
+		#redScore{
+			float: left;
+			color: red;
+			font-size: 20px;
+			margin-top: 20px;
+		}
+		#playerTurn{
+			float: left;
+			font-size: 20px;
+			margin-top: 20px;
+			margin-left: 430px;
+			color: blue;
+		}
+		li a{
+			padding: 14px 16px;
+			display: block;
+			color: #ff9494;
+			background-color: lightgrey;
+		}
+		ul{
+			list-style-type: none;
+		}
+		li{
+			float: left;
+		}
+		.codeNamesNav{
+			margin-bottom: 100px;
+            margin-left: 45%;
+		}
+		li a:hover {
+  			background-color: #ff9494;
+			color: lightgrey;
+		}
+		.active{
+			background-color: #ff5252;
+			color: lightgrey;
+		}
+		.active:hover{
+			background-color: #ff5252;
+		}
